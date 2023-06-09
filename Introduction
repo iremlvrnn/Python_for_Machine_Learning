@@ -1,1 +1,908 @@
-
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/iremlvrnn/Python_for_Machine_Learning/blob/main/Introduction\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# Chapter 1\n",
+        "### Your first day at your new job 👩‍💻👨‍💻\n",
+        "\n",
+        "You are starting a new job as a junior software developer in an IT company. \n",
+        "\n",
+        "The company’s HR department asks you to fill out a form, so you start by assigning your personal information to corresponding variables.\n",
+        "\n",
+        "📌 Create a variable for your name, surname, age, ID number, place of residence, to specify if you have active health insurance or not, and lastly one for specifying your nationality.\n"
+      ],
+      "metadata": {
+        "id": "VMuUK0ap_bRD"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "OPLhhc2Sp-D0"
+      },
+      "outputs": [],
+      "source": [
+        "#Please assign your personal information to variables\n",
+        "my_name =  \"İrem\"\n",
+        "my_surname = \"Elveren\"\n",
+        "my_age = 22\n",
+        "ID_number = 123456789\n",
+        "where_i_live = \"İstanbul\"\n",
+        "health_insurance = True\n",
+        "#my_nationality = \"Turkish\""
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "3zaUlxwcp-D0"
+      },
+      "source": [
+        "###Meet And Greet\n",
+        "Introduce yourself to your new co-workers.\n",
+        "\n",
+        "📌 Use a f-string to print \"My name is Joey Tribbiani I am 25 years old and I live in London”."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "RMWNieY960k-"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Write a sentence using the print function to describe yourself using the variables above in the correct data type\n",
+        "print(f\"My name is {my_name} {my_surname}. I am {str(my_age)} years old. My ID number is {ID_number}. I live in {where_i_live}\")"
+      ],
+      "metadata": {
+        "id": "XNuh5_2WXwvg",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "0b428fb8-5f98-4534-e3ac-5e4d7386012e"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "My name is İrem Elveren. I am 22 years old. My ID number is 123456789. I live in İstanbul\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "EEL9To4ip-D1"
+      },
+      "source": [
+        "### Equipment starter pack\n",
+        "The HR department asks you to list the items you would need to improve your work efficiency\n",
+        "\n",
+        "Mandatory:\n",
+        "* Laptop\n",
+        "* Headset\n",
+        "* Second monitor\n",
+        "\n",
+        "Optional:\n",
+        "* Mousepad\n",
+        "* USB drive\n",
+        "* External drive\n",
+        "\n",
+        "\n",
+        "📌 Create a shopping list that contains items above and print it."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "fPFBLDyqp-D2"
+      },
+      "outputs": [],
+      "source": [
+        "#Create the item_list\n",
+        "item_list = ['laptop', 'headset', 'second monitor', 'mousepad', 'usb drive', 'external drive']"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Print the list\n",
+        "print(item_list)"
+      ],
+      "metadata": {
+        "id": "358R_CN5U2-J",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "e2f0fbcb-38d0-4a39-8618-5a8d30c9343c"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['laptop', 'headset', 'second monitor', 'mousepad', 'usb drive', 'external drive']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "5keEWjCyp-D2"
+      },
+      "source": [
+        "####What is mandatory and what is optional?\n",
+        "\n",
+        "📌 Use list slicing to devide your list in two list: 'mandatory_item_list' and 'optional_item_list' and print both to the screen."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "E6ewuDYZp-D2",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "c4682e48-b828-4e9b-cf05-f68d7e973aa5"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['laptop', 'headset', 'second monitor']\n"
+          ]
+        }
+      ],
+      "source": [
+        "#Use list slicing to divide the mandatory items\n",
+        "#print(item_list[0:3])\n",
+        "\n",
+        "mandatory_item_list = item_list[0:3]\n",
+        "print(mandatory_item_list)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Use list slicing to divide the optional items\n",
+        "print(item_list[3:6])"
+      ],
+      "metadata": {
+        "id": "hOmkym01RGEL",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "bce8ba48-748d-4dcf-9f5c-df42428ab054"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['mousepad', 'usb drive', 'external drive']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Print both to the screen\n",
+        "print(item_list[0:6])"
+      ],
+      "metadata": {
+        "id": "xsVv1_msVE1_",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "a79bb1d9-ccc7-4551-dd7c-58a69ea7ecca"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['laptop', 'headset', 'second monitor', 'mousepad', 'usb drive', 'external drive']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "s_M1Q93wp-D3"
+      },
+      "source": [
+        "#### Go Shopping\n",
+        "Next, you will have to go and purchase these items, the finance department confirmed a budget of $5000.\n",
+        "\n",
+        "📌 Assign 5000 to a variable called limit, so you know how much you can spend."
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [],
+      "metadata": {
+        "id": "V0_cd-drszpv"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "nCmpm0oqp-D3"
+      },
+      "outputs": [],
+      "source": [
+        "#Assign the spending limit value to a variable called limit\n",
+        "limit = 10000"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "VwbEEymVp-D3"
+      },
+      "source": [
+        "####Price dictionary\n",
+        "\n",
+        "Before you start shopping yo need to find the best items that you can buy within the company budget. \n",
+        "\n",
+        "📌 Prepare a dictionary called “price_sheet” that includes the items as keys and the prices as values.  \n",
+        " "
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "9o9n9Ag-p-D3"
+      },
+      "outputs": [],
+      "source": [
+        "#Create a dictionary that contains each item and its price\n",
+        "\n",
+        "price_sheet = {\n",
+        "    'laptop' : 1500,\n",
+        "    'headset' : 100,\n",
+        "    'second monitor' : 200,\n",
+        "    'mousepad' : 50,\n",
+        "    'usb drive' : 70,\n",
+        "    'external drive' : 250\n",
+        "}"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "rUYivBVEBhCv"
+      },
+      "source": [
+        "####Shopping functions\n",
+        "\n",
+        "You need to define three functions that will help you during shopping.\n",
+        "\n",
+        "📌 First, create an empty list that  will be your shopping cart. Here you will add the items you need to purchase.\n",
+        "\n",
+        "1. Define a function for both adding items to the cart and removing them from the item_list.\n",
+        "\n",
+        "📌 The \"add_to_cart\" function should take the item name and the quantity to buy as an argument. \n",
+        "\n",
+        "2. Define a function that will create an invoice. \n",
+        "\n",
+        "📌 The \"create_invoice\" function should calculate the taxes of each item (18%) and add it to the total amount.\n",
+        "\n",
+        "3. Define a function for the checkout. \n",
+        "\n",
+        "📌 The \"checkout\" function should subtract the total amount from the budget and print a statement to inform if the payment was successful. "
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Initialize the cart list\n",
+        "cart = []"
+      ],
+      "metadata": {
+        "id": "dBNZ2ZdkGHUe"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Define the \"add_to_cart\" function\n",
+        "def add_to_cart (item, quantity):\n",
+        "  cart.append((item,quantity))\n",
+        "  #item_list.remove[item]\n"
+      ],
+      "metadata": {
+        "id": "HH26hHHFGKPJ"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Define the \"create_invoice\" function\n",
+        "def create_invoice():\n",
+        "  total_amount_inc_tax = 0\n",
+        "  for item, quantity in cart:\n",
+        "    price = price_sheet[item]\n",
+        "    tax = 0.18 * price\n",
+        "    total = (tax + price) * quantity\n",
+        "    total_amount_inc_tax += total\n",
+        "    print('Item:', item, '\\t', 'price:', price, 'quantity:', quantity, '\\t', 'tax:', tax, '\\t', 'total:', total, '\\n' )\n",
+        "\n",
+        "    print(\"after the taxes are applied the total amount is:\", '\\t', total_amount_inc_tax)\n",
+        "\n",
+        "    return total_amount_inc_tax"
+      ],
+      "metadata": {
+        "id": "TUmNr4xVGQdm"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Define the \"checkout\" function\n",
+        "def checkout():\n",
+        "  global limit\n",
+        "  total_amount = create_invoice()\n",
+        "  if limit == 0:\n",
+        "    print(\"you dont have any budget\")\n",
+        "  elif total_amount > limit:\n",
+        "    print(\"the amount you have to pay is above the limit, you have drop some items\")\n",
+        "  else:\n",
+        "    limit -= total_amount\n",
+        "    print(f\"the total amount (incl.taxes) you've paid is {total_amount} you have {limit} dollars left\")\n"
+      ],
+      "metadata": {
+        "id": "iUlKiXgMGdIk"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Let's shop!"
+      ],
+      "metadata": {
+        "id": "2IFUlu0yB0In"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Call the \"add_to_cart\" function for each item\n",
+        " \n",
+        "#Add first item to cart\n",
+        "add_to_cart(\"laptop\", 1)\n",
+        "\n",
+        "#Add second item to cart\n",
+        "add_to_cart('headset', 3)\n",
+        " \n",
+        "#Add third item to cart\n",
+        "add_to_cart('second_monitor', 2)\n",
+        " \n",
+        "#Add fourth item to cart\n",
+        "add_to_cart('mousepad', 2)\n",
+        " \n",
+        "#Add fifth item to cart\n",
+        "add_to_cart('usb drive', 1)\n",
+        "\n",
+        "#Add last item to cart\n",
+        "add_to_cart('external driver', 1)\n",
+        " \n",
+        "#Call the create \"checkout\" function to pay for all your items \n",
+        "checkout()"
+      ],
+      "metadata": {
+        "id": "FDO7CRJTWPg7",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "e689eec5-b9ba-4656-f1d3-ce9d96dbbcfd"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Item: laptop \t price: 1500 quantity: 1 \t tax: 270.0 \t total: 1770.0 \n",
+            "\n",
+            "after the taxes are applied the total amount is: \t 1770.0\n",
+            "the amount you have to pay is above the limit, you have drop some items\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "###Game Night\n",
+        "\n",
+        "You are back at the office and the HR department organizes a welcome party for new employees. \n",
+        "\n",
+        "You decide to create a Rock-Paper-Scissor game. \n",
+        "\n",
+        "📌 Create a Rock-Paper-Scissor game in which the user plays against the computer. The player will choose one of the actions, and the computer will choose its action randomly.\n"
+      ],
+      "metadata": {
+        "id": "ZL-r2x_xKixg"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Import the random library\n",
+        "import random"
+      ],
+      "metadata": {
+        "id": "qzD5pxBTgcFb"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#create a list containing the three actions of the game.\n",
+        "actions_list = [\"rock\", \"paper\", \"scissors\"]"
+      ],
+      "metadata": {
+        "id": "oJv-ihLAgcRo"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Set the scores of players to 0\n",
+        "computer_score = 0\n",
+        "player_score = 0\n",
+        "\n",
+        "#Ask the user how many rounds they want to play\n",
+        "total_rounds = input(\"how many rounds do you want to play? please enter a number: \")\n",
+        "\n",
+        "\n",
+        "#Add a round_counter that is 0 at the beginning\n",
+        "round_counter = 0\n",
+        "\n",
+        "#Write a while loop and put the game inside\n",
+        "while True:\n",
+        "\n",
+        "\n",
+        "  #Increase round_counter by and print it\n",
+        "  round_counter += 1\n",
+        "  print(\"round_number:\", round_counter)\n",
+        "  \n",
+        "\n",
+        "  #Select a random action for computer\n",
+        "  computer_choice = random.choice(actions_list)\n",
+        "\n",
+        "\n",
+        "  #Ask player to choose an action\n",
+        "  player_choice = input(\"please choose your action:\")  \n",
+        "\n",
+        "  #Print the players choices\n",
+        "  print(\"computer:\", computer_choice)\n",
+        "  print(\"player:\", player_choice)\n",
+        "  \n",
+        "  #tie condition\n",
+        "  if computer_choice == player_choice:\n",
+        "    print(\"Tie! both players choouse the same action\")\n",
+        "\n",
+        "  #Remaining conditions\n",
+        "  elif computer_choice == \"paper\":\n",
+        "      if player_choice == \"rock\":\n",
+        "        print(\"winner is computer\")\n",
+        "        computer_score += 1\n",
+        "      else:\n",
+        "        print(\"winner is player\")\n",
+        "        player_score += 1\n",
+        "\n",
+        "  elif computer_choice == \"rock\":\n",
+        "      if player_choice == \"paper\":\n",
+        "        print(\"winner is computer\")\n",
+        "        computer_score += 1\n",
+        "      else:\n",
+        "        print(\"winner is player\")\n",
+        "        player_score += 1\n",
+        "\n",
+        "  elif computer_choice == \"scissors\":\n",
+        "      if player_choice == \"paper\":\n",
+        "        print(\"winner is computer\")\n",
+        "        computer_score += 1\n",
+        "      else:\n",
+        "        print(\"winner is player\")\n",
+        "        player_score += 1\n",
+        "\n",
+        "\n",
+        "#Stop the while loop if the round_counter equals the number of total rounds\n",
+        "  if round_counter == int(total_rounds):\n",
+        "     break\n",
+        "\n",
+        "\n",
+        "#Print the outcome of the game by using conditional statements\n",
+        "if computer_score == player_score:\n",
+        "  print(\"tie\", computer_score, \":\" , player_score)\n",
+        "elif computer_score > player_score:\n",
+        "  print(\"computer is winner\", computer_score, \":\" , player_score)\n",
+        "elif computer_score < player_score:\n",
+        "  print(\"palyer is winner\", computer_score, \":\" , player_score)\n",
+        "  \n"
+      ],
+      "metadata": {
+        "id": "DNUa_9afWqMd",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "c6e46014-ce35-45c0-df37-90cc2bf09793"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "how many rounds do you want to play? please enter a number: 3\n",
+            "round_number: 1\n",
+            "please choose your action:rock\n",
+            "computer: paper\n",
+            "player: rock\n",
+            "winner is computer\n",
+            "round_number: 2\n",
+            "please choose your action:paper\n",
+            "computer: paper\n",
+            "player: paper\n",
+            "Tie! both players choouse the same action\n",
+            "round_number: 3\n",
+            "please choose your action:paper\n",
+            "computer: rock\n",
+            "player: paper\n",
+            "winner is computer\n",
+            "computer is winner 2 : 0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "jdrYN0Xgp-D6"
+      },
+      "source": [
+        "# Your first task \n",
+        "\n",
+        "Rachel asks you to write a program to track the name and revenue each employee brings.  \n",
+        "\n",
+        "* Create the \"salesperson_revenue\" dictionary to see the employee name as a key and the revenue as a value.\n",
+        "\n",
+        "  📌 Every employee starts with 0 revenue.\n",
+        "* Define the \"enter_revenue\" function. \n",
+        "\n",
+        "  📌 The function takes the name and revenue as an argument and updates the salesperson_revenue dictionary.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Create salesperson_revenue dictionary\n",
+        "salesperson_revenue = {\n",
+        "    'İrem' : 0,\n",
+        "    'Arslan' : 0,\n",
+        "    'Gizem' : 0,\n",
+        "    'Meltem': 0,\n",
+        "    'Emir': 0,\n",
+        "    'Tuğçe': 0,\n",
+        "    'Samet': 0\n",
+        "\n",
+        "}"
+      ],
+      "metadata": {
+        "id": "3vzRo7hyMRv2"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Define enter_revenue function\n",
+        "def enter_revenue(name, revenue):\n",
+        "  global salesperson_revenue\n",
+        "  salesperson_revenue[name] += revenue"
+      ],
+      "metadata": {
+        "id": "m-8IozBwMRzM"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "####Try out the functions\n",
+        "* In a while loop ask the user to give the name of the employee and for the revenue \n",
+        "\n",
+        "  📌 If the user enters “quit” the loop should break.\n",
+        "\n",
+        "After that, print out the salesperson_revenue dictionary.\n"
+      ],
+      "metadata": {
+        "id": "UnTGSoNTi58u"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Asking user employee name as input\n",
+        "while True:\n",
+        "  name = input(\"employee name: \")\n",
+        "  if name == \"quit\":\n",
+        "    break\n",
+        "  revenue = int(input(\"enter revenue: \"))\n",
+        "  enter_revenue(name, revenue)\n",
+        "  print(f\"{name}'s revenue is {salesperson_revenue[name]}\")\n",
+        "  "
+      ],
+      "metadata": {
+        "id": "2E549VvFXNi6",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "e321dd9d-e4df-4777-805e-385a1decb050"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "employee name: İrem\n",
+            "enter revenue: 10\n",
+            "İrem's revenue is 10\n",
+            "employee name: Arslan\n",
+            "enter revenue: 8\n",
+            "Arslan's revenue is 8\n",
+            "employee name: Gizem\n",
+            "enter revenue: 5\n",
+            "Gizem's revenue is 5\n",
+            "employee name: Meltem\n",
+            "enter revenue: 7\n",
+            "Meltem's revenue is 7\n",
+            "employee name: Tuğçe\n",
+            "enter revenue: 3\n",
+            "Tuğçe's revenue is 3\n",
+            "employee name: Emir\n",
+            "enter revenue: 2\n",
+            "Emir's revenue is 2\n",
+            "employee name: Samet\n",
+            "enter revenue: 5\n",
+            "Samet's revenue is 5\n",
+            "employee name: quit\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Print the salesperson_revenue dictionary\n",
+        "print(salesperson_revenue)"
+      ],
+      "metadata": {
+        "id": "OAvl9rgOXPe6",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "6f63cfb2-845e-4807-b9a6-113594b1e3d6"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{'İrem': 10, 'Arslan': 8, 'Gizem': 5, 'Meltem': 7, 'Emir': 2, 'Tuğçe': 3, 'Samet': 5}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "name = \"johnny doe\"\n",
+        "\n",
+        "def func():\n",
+        "  global name\n",
+        "  name = \"john doe\"\n",
+        "\n",
+        "func()\n",
+        "print(name)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "gXWmVmxYBPy0",
+        "outputId": "4142d404-fd24-4a88-de22-f23d7402278f"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "john doe\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "person_list = {\n",
+        "    \"ömer\": 25,\n",
+        "    \"winston\": 34,\n",
+        "    \"jane\": 28,\n",
+        "    \"robin\": 47\n",
+        "}\n",
+        "\n",
+        "\n",
+        "sum = 0\n",
+        "for i in person_list.values():\n",
+        "  if i > 28:\n",
+        "     sum += i\n",
+        "\n",
+        "print(sum)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "1OC0Ekp7EqFo",
+        "outputId": "16917c5a-e1fd-4da2-8007-d6ac405ac4d6"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "81\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "list1 = [1, 5, 7, 2, 4, 12]\n",
+        "result_list = []\n",
+        "\n",
+        "def lets_add():\n",
+        "  for i in list1:\n",
+        "    if i%2 == 0:\n",
+        "      result_list.append(i)\n",
+        "\n",
+        "lets_add()\n",
+        "print(result_list)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "76Wb-oSJFamr",
+        "outputId": "9a954a74-ad72-43d3-d532-05bb54d26b18"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[2, 4, 12]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "list = [\"irem\", \"emre\", \"ayşe\"]\n",
+        "\n",
+        "list.append([\"mouse\", \"pencil\", \"table\"])\n",
+        "#list.remove(\"mouse\")\n",
+        "\n",
+        "print(list)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 240
+        },
+        "id": "TkhzZLO1F2mf",
+        "outputId": "f4c12481-c0f7-4db0-e8dc-db4943734bf7"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "ValueError",
+          "evalue": "ignored",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mValueError\u001b[0m                                Traceback (most recent call last)",
+            "\u001b[0;32m<ipython-input-126-83b7d950702f>\u001b[0m in \u001b[0;36m<cell line: 4>\u001b[0;34m()\u001b[0m\n\u001b[1;32m      2\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      3\u001b[0m \u001b[0mlist\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mappend\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0;34m\"mouse\"\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;34m\"pencil\"\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;34m\"table\"\u001b[0m\u001b[0;34m]\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 4\u001b[0;31m \u001b[0mlist\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mremove\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"mouse\"\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m      5\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      6\u001b[0m \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mlist\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;31mValueError\u001b[0m: list.remove(x): x not in list"
+          ]
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "interpreter": {
+      "hash": "c5914ae3790566b9cd0e984a9bdda42a29da8adf046b5ac0173e0d37aacf3dab"
+    },
+    "kernelspec": {
+      "display_name": "Python 3.9.7",
+      "language": "python",
+      "name": "python3"
+    },
+    "language_info": {
+      "codemirror_mode": {
+        "name": "ipython",
+        "version": 3
+      },
+      "file_extension": ".py",
+      "mimetype": "text/x-python",
+      "name": "python",
+      "nbconvert_exporter": "python",
+      "pygments_lexer": "ipython3",
+      "version": "3.9.7"
+    },
+    "orig_nbformat": 4,
+    "colab": {
+      "provenance": [],
+      "include_colab_link": true
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 0
+}
